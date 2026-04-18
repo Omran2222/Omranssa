@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omran Alsaedi | Unity Game Programmer & XR Developer</title>
+    <meta name="description" content="Portfolio of Omran Alsaedi - Unity Game Programmer & XR Developer based in Riyadh, Saudi Arabia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Omran<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+                <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="#education" data-i18n="nav_education">Education</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="toggle-btn" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun" id="themeIcon"></i>
+                </button>
+                <button class="toggle-btn" id="langToggle" aria-label="Toggle language">
+                    <span id="langLabel">AR</span>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting" data-i18n="hero_greeting">Hello, I'm</p>
+                <h1 class="hero-name"><span data-i18n="hero_firstname">Omran</span> <span class="highlight" data-i18n="hero_lastname">Alsaedi</span></h1>
+                <div class="hero-title-wrapper">
+                    <span class="hero-title" id="typedText"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description" data-i18n="hero_desc">
+                    Crafting immersive experiences through code. Specialized in Unity 3D, XR environments, 
+                    and AI-powered gameplay mechanics.
+                </p>
+                <div class="hero-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span data-i18n="hero_location">Riyadh, Saudi Arabia</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-gamepad"></i> <span data-i18n="hero_btn_projects">View Projects</span>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> <span data-i18n="hero_btn_contact">Get In Touch</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="code-title">GameDeveloper.cs</span>
+                    </div>
+                    <pre class="code-body"><code><span class="keyword">public class</span> <span class="class-name">GameDeveloper</span> : <span class="class-name">MonoBehaviour</span>
+{
+    <span class="keyword">public string</span> name = <span class="string">"Omran Alsaedi"</span>;
+    <span class="keyword">public int</span> experience = <span class="number">2</span>;
+    <span class="keyword">public string[]</span> skills = 
+    {
+        <span class="string">"Unity 3D"</span>, 
+        <span class="string">"XR Development"</span>,
+        <span class="string">"AI Integration"</span>
+    };
+
+    <span class="keyword">void</span> <span class="method">Start</span>()
+    {
+        <span class="method">BuildAmazingGames</span>();
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator">
+            <span data-i18n="hero_scroll">Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">01.</span> <span data-i18n="about_title">About Me</span>
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-i18n="about_p1">
+                        Highly skilled <strong>Unity Game Programmer</strong> with over <strong>2 years of experience</strong> 
+                        in developing immersive environments and high-quality games. I have a proven track record in 
+                        leading game development projects and mentoring technical teams at <strong>Taibah Valley</strong>.
+                    </p>
+                    <p data-i18n="about_p2">
+                        Expert in <strong>C# and OOP principles</strong>, with a specialized focus on integrating 
+                        <strong>AI models into XR environments</strong>. Committed to contributing to the growth of 
+                        Saudi Arabia's homegrown IP and the global gaming hub vision.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label" data-i18n="stat_years">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label" data-i18n="stat_projects">Projects Delivered</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">XR</span>
+                            <span class="stat-label" data-i18n="stat_specialist">Specialist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-frame">
+                        <div class="profile-placeholder">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <div class="frame-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-dark" id="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">02.</span> <span data-i18n="skills_title">Technical Skills</span>
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3 data-i18n="skill_engines">Game Engines</h3>
+                    <div class="skill-tags">
+                        <span class="tag tag-expert">Unity 3D (Expert)</span>
+                        <span class="tag">XR Interaction Toolkit</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3 data-i18n="skill_programming">Programming</h3>
+                    <div class="skill-tags">
+                        <span class="tag tag-expert">C# (Advanced)</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">LINQ</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 data-i18n="skill_mobile">Mobile Development</h3>
+                    <div class="skill-tags">
+                        <span class="tag" data-i18n="skill_mobile_opt">Android/iOS Optimization</span>
+                        <span class="tag">Input System</span>
+                        <span class="tag">UI Toolkit</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-cubes"></i></div>
+                    <h3 data-i18n="skill_core">Core Concepts</h3>
+                    <div class="skill-tags">
+                        <span class="tag">OOP</span>
+                        <span class="tag">Singleton</span>
+                        <span class="tag">Observer</span>
+                        <span class="tag">Factory</span>
+                        <span class="tag">Object Pooling</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3 data-i18n="skill_optimization">Optimization</h3>
+                    <div class="skill-tags">
+                        <span class="tag" data-i18n="skill_memory">Memory Management</span>
+                        <span class="tag" data-i18n="skill_drawcall">Draw Call Reduction</span>
+                        <span class="tag" data-i18n="skill_fps">FPS Stabilization</span>
+                        <span class="tag" data-i18n="skill_texture">Texture Compression</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                    <h3 data-i18n="skill_tools">Tools & Version Control</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">JSON/REST APIs</span>
+                        <span class="tag">Firebase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">03.</span> <span data-i18n="exp_title">Experience</span>
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-i18n="exp_role">Game Programmer (Unity)</h3>
+                            <span class="timeline-company">
+                                <i class="fas fa-building"></i> <span data-i18n="exp_company">Taibah Valley (Wadi Taibah)</span>
+                            </span>
+                            <span class="timeline-date">
+                                <i class="fas fa-calendar-alt"></i> 2023 – 2025
+                            </span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li><i class="fas fa-chevron-right"></i><span data-i18n="exp_d1">Lead the development of multiple B2B game projects from initial concept to deployment.</span></li>
+                            <li><i class="fas fa-chevron-right"></i><span data-i18n="exp_d2">Architected scalable and stable game code using C# and Unity, ensuring high technical quality.</span></li>
+                            <li><i class="fas fa-chevron-right"></i><span data-i18n="exp_d3">Implemented and integrated AI models within immersive XR environments to enhance gameplay mechanics.</span></li>
+                            <li><i class="fas fa-chevron-right"></i><span data-i18n="exp_d4">Mentored and trained junior developers and colleagues in XR technologies and Unity best practices.</span></li>
+                            <li><i class="fas fa-chevron-right"></i><span data-i18n="exp_d5">Collaborated with cross-functional teams to transform creative B2B game ideas into robust technical specifications.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section-dark" id="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">04.</span> <span data-i18n="proj_title">Key Projects</span>
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj1_name">Performance Optimization</h3>
+                        <p data-i18n="proj1_desc">Successfully optimized mobile game projects to maintain stable <strong>60 FPS</strong> by implementing efficient Object Pooling systems and managing memory allocation.</p>
+                        <div class="project-tags">
+                            <span>Object Pooling</span>
+                            <span data-i18n="proj1_t2">Memory Management</span>
+                            <span>60 FPS</span>
+                            <span data-i18n="proj1_t4">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-vr-cardboard"></i></div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj2_name">XR Integration</h3>
+                        <p data-i18n="proj2_desc">Developed interactive training simulations using <strong>VR/AR</strong>, focusing on seamless user experience and realistic physics interactions.</p>
+                        <div class="project-tags">
+                            <span>VR/AR</span>
+                            <span data-i18n="proj2_t2">Training Simulation</span>
+                            <span data-i18n="proj2_t3">Physics</span>
+                            <span data-i18n="proj2_t4">UX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-star"></i></div>
+                    <div class="project-content">
+                        <h3 data-i18n="proj3_name">Sera (In Development)</h3>
+                        <p data-i18n="proj3_desc">Currently developing <strong>Sera</strong>, an indie game built with Unity featuring immersive gameplay mechanics and AI-driven experiences.</p>
+                        <div class="project-tags">
+                            <span>Unity 3D</span>
+                            <span data-i18n="proj3_t2">Indie Game</span>
+                            <span data-i18n="proj3_t3">In Development</span>
+                            <span data-i18n="proj3_t4">AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">05.</span> <span data-i18n="edu_title">Education & Certifications</span>
+            </h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 data-i18n="edu1_name">Bachelor of Science in Mathematics</h3>
+                    <span class="education-place" data-i18n="edu1_place">Taibah University</span>
+                    <p data-i18n="edu1_desc">Strong foundation in computational logic, physics, and complex problem-solving.</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon"><i class="fas fa-certificate"></i></div>
+                    <h3 data-i18n="edu2_name">Unity Certified Associate</h3>
+                    <span class="education-place">Unity Technologies</span>
+                    <p data-i18n="edu2_desc">Certified proficiency in Unity development, game design principles, and C# programming.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section class="section section-dark" id="languages">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">06.</span> <span data-i18n="lang_title">Languages</span>
+            </h2>
+            <div class="languages-grid">
+                <div class="language-card">
+                    <div class="language-flag">🇸🇦</div>
+                    <h3 data-i18n="lang_arabic">Arabic</h3>
+                    <span class="language-level" data-i18n="lang_native">Native</span>
+                    <div class="language-bar">
+                        <div class="language-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="language-card">
+                    <div class="language-flag">🇬🇧</div>
+                    <h3 data-i18n="lang_english">English</h3>
+                    <span class="language-level" data-i18n="lang_fluent">Intermediate</span>
+                    <div class="language-bar">
+                        <div class="language-progress" style="width: 60%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">07.</span> <span data-i18n="contact_title">Get In Touch</span>
+            </h2>
+            <div class="contact-content">
+                <p class="contact-text" data-i18n="contact_desc">
+                    I'm always open to new opportunities, collaborations, and exciting game development projects. 
+                    Whether you have a question or just want to say hi, feel free to reach out!
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:Omran2222@outlook.sa" class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <span data-i18n="contact_email">Email Me</span>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <span class="footer-code">&lt;/&gt;</span> 
+                <span data-i18n="footer_built">Designed & Built by</span> <strong>Omran Alsaedi</strong>
+            </p>
+            <p class="footer-year" data-i18n="footer_rights">&copy; 2026 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
